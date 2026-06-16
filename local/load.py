@@ -70,5 +70,5 @@ def load_file(filepath: str):
 if __name__ == "__main__":
     create_tables()
     today = datetime.utcnow().strftime("%Y-%m-%d")
-    for file in glob(f"data/raw/dt={today}/*.json"):
+    for file in glob(f"/opt/airflow/data/raw/dt={today}/*.json"):
         load_file(file)

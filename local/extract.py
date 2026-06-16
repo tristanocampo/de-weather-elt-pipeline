@@ -30,7 +30,7 @@ def save_raw(data: dict, city: str):
     """Save to data/raw/dt=YYYY-MM-DD/city.json
     """
     today = datetime.utcnow().strftime("%Y-%m-%d")
-    folder = f"data/raw/dt={today}"
+    folder = f"/opt/airflow/data/raw/dt={today}"
     os.makedirs(folder, exist_ok=True)
 
     path = f"{folder}/{city.replace(' ', '_')}.json"
